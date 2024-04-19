@@ -13,31 +13,43 @@ Puedes descargar Python desde [python.org](https://www.python.org/downloads/).
 Para ejecutar esta aplicación, necesitarás instalar un par de bibliotecas de Python: `qrcode` y `Pillow`. Aquí están los pasos para configurar tu entorno:
 
 1. **Clona o Descarga el Repositorio**
+   - Primero, clona el repositorio en tu máquina local o descarga el código fuente como un archivo zip y extrae los archivos.
+   - `git clone https://tu-url-del-repositorio.git`
+   - `cd generador-codigo-qr`
 
-   Primero, clona el repositorio en tu máquina local o descarga el código fuente como un archivo zip y extrae los archivos.
+2. **Crea un Entorno Virtual (Opcional)**
+   - Es una buena práctica crear un entorno virtual para proyectos de Python. Esto mantiene las dependencias de tu proyecto separadas del entorno global de Python.
+   - `python -m venv venv`
+   - `source venv/bin/activate` # En Windows usa `venv\Scripts\activate`
 
-   ```bash
-   git clone https://tu-url-del-repositorio.git
-   cd generador-codigo-qr
-Crea un Entorno Virtual (Opcional)Es una buena práctica crear un entorno virtual para proyectos de Python. Esto mantiene las dependencias de tu proyecto separadas del entorno global de Python.
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate  # En Windows usa `venv\Scripts\activate`
-Instala las DependenciasInstala las bibliotecas de Python requeridas usando pip:
-bash
-Copy code
-pip install qrcode[pil]
-Ejecutando la Aplicación
+3. **Instala las Dependencias**
+   - Instala las bibliotecas de Python requeridas usando pip:
+   - `pip install qrcode[pil]`
+
+## Ejecutando la Aplicación
 
 Para ejecutar la aplicación, navega al directorio del proyecto en tu terminal y ejecuta el script de Python:
+- `python qr_generator.py`
 
-bash
-Copy code
-python qr_generator.py
-Uso
+## Uso
 
-Iniciar la AplicaciónEjecuta el script como se mencionó anteriormente. Se abrirá la ventana de la aplicación.
-Ingresa una URLEscribe o pega la URL para la cual deseas generar un código QR en el campo de entrada.
-Genera el Código QRHaz clic en el botón "Generar Código QR". El código QR aparecerá debajo del botón en la ventana de la aplicación.
-Guardar el Código QR (Opcional)Puedes hacer clic derecho en la imagen del código QR generado en la aplicación y guardarla en tu computadora.
+1. **Iniciar la Aplicación**
+   - Ejecuta el script como se mencionó anteriormente. Se abrirá la ventana de la aplicación.
+
+2. **Ingresa una URL**
+   - Escribe o pega la URL para la cual deseas generar un código QR en el campo de entrada.
+
+3. **Genera el Código QR**
+   - Haz clic en el botón "Generar Código QR". El código QR aparecerá debajo del botón en la ventana de la aplicación.
+
+4. **Guardar el Código QR (Opcional)**
+   - Puedes hacer clic derecho en la imagen del código QR generado en la aplicación y guardarla en tu computadora.
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! No dudes en enviar solicitudes de extracción, crear problemas o sugerir mejoras.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
+
