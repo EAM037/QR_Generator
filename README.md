@@ -29,7 +29,7 @@ Para ejecutar esta aplicación, necesitarás instalar un par de bibliotecas de P
 ## Ejecutando la Aplicación
 
 Para ejecutar la aplicación, navega al directorio del proyecto en tu terminal y ejecuta el script de Python:
-- `python qr_generator.py`
+- `python qr_with_url.py`
 
 ## Uso
 
