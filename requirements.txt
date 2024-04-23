@@ -1,0 +1,5 @@
+#DEPENDENCIAS DEL CODIGO 
+
+qrcode
+Pillow
+# tkinter normalmente esta incluido en la libreria Standard de Python (no se puede instalar con pip)
