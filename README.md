@@ -1,55 +1,33 @@
-# Generador de Códigos QR con URL
+# Generador de Códigos QR
 
-Esta es una aplicación de escritorio simple que genera códigos QR basados en URLs proporcionadas por el usuario. Está construida utilizando Python y tkinter, y está diseñada para ser amigable y minimalista.
+## Descripción
+Esta aplicación permite a los usuarios generar códigos QR a partir de una URL o de datos introducidos manualmente. La interfaz gráfica está desarrollada utilizando `tkinter`, haciendo que la aplicación sea fácil de usar y accesible para cualquier usuario con conocimientos básicos de computación.
 
-## Prerrequisitos
+## Autores
+- Alfonso Garcia Yague
+- Emmanuel Acosta
 
-Antes de ejecutar esta aplicación, asegúrate de tener Python instalado en tu computadora. Esta aplicación ha sido probada con Python 3.8, pero debería funcionar con cualquier versión de Python 3.x.
+## Dependencias
+Para ejecutar esta aplicación, necesitarás Python y algunas bibliotecas externas. Asegúrate de tener instalado Python en tu sistema. Esta aplicación ha sido probada con Python 3.8, pero debería ser compatible con versiones posteriores.
 
-Puedes descargar Python desde [python.org](https://www.python.org/downloads/).
+### Bibliotecas necesarias:
+- `tkinter`: Para la interfaz gráfica de usuario. `tkinter` suele venir preinstalado con Python.
+- `qrcode`: Para la generación de códigos QR.
+- `Pillow` (PIL Fork): Para manejar imágenes dentro de la aplicación.
 
-## Instalación
+Puedes instalar las dependencias necesarias mediante el siguiente comando:
+pip install qrcode Pillow
 
-Para ejecutar esta aplicación, necesitarás instalar un par de bibliotecas de Python: `qrcode` y `Pillow`. Aquí están los pasos para configurar tu entorno:
+Nota: `tkinter` generalmente viene incluido en la instalación estándar de Python. Si tu instalación de Python no lo incluye, puedes necesitar instalarlo siguiendo las instrucciones específicas para tu sistema operativo.
 
-1. **Clona o Descarga el Repositorio**
-   - Primero, clona el repositorio en tu máquina local o descarga el código fuente como un archivo zip y extrae los archivos.
-   - `git clone https://tu-url-del-repositorio.git`
-   - `cd generador-codigo-qr`
+## Ejecución del Programa
+Para ejecutar esta aplicación, simplemente navega hasta el directorio del archivo y ejecuta el script `main.py` usando Python. Por ejemplo:
+python main.py
 
-2. **Crea un Entorno Virtual (Opcional)**
-   - Es una buena práctica crear un entorno virtual para proyectos de Python. Esto mantiene las dependencias de tu proyecto separadas del entorno global de Python.
-   - `python -m venv venv`
-   - `source venv/bin/activate` # En Windows usa `venv\Scripts\activate`
 
-3. **Instala las Dependencias**
-   - Instala las bibliotecas de Python requeridas usando pip:
-   - `pip install qrcode[pil]`
+## Funcionalidades
+- **Generar QR desde URL**: Permite a los usuarios introducir una URL para generar un código QR correspondiente.
+- **Generar QR desde Datos de Entrada**: Permite a los usuarios introducir cualquier texto o dato para generar un código QR.
 
-## Ejecutando la Aplicación
-
-Para ejecutar la aplicación, navega al directorio del proyecto en tu terminal y ejecuta el script de Python:
-- `python qr_with_url.py`
-
-## Uso
-
-1. **Iniciar la Aplicación**
-   - Ejecuta el script como se mencionó anteriormente. Se abrirá la ventana de la aplicación.
-
-2. **Ingresa una URL**
-   - Escribe o pega la URL para la cual deseas generar un código QR en el campo de entrada.
-
-3. **Genera el Código QR**
-   - Haz clic en el botón "Generar Código QR". El código QR aparecerá debajo del botón en la ventana de la aplicación.
-
-4. **Guardar el Código QR (Opcional)**
-   - Puedes hacer clic derecho en la imagen del código QR generado en la aplicación y guardarla en tu computadora.
-
-## Contribuciones
-
-¡Las contribuciones son bienvenidas! No dudes en enviar solicitudes de extracción, crear problemas o sugerir mejoras.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
-
+## Interfaz Gráfica
+La interfaz gráfica cuenta con un campo de entrada para los datos o URL, botones para generar el código QR y un área donde se muestra el código QR generado.
