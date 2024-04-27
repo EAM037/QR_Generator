@@ -64,7 +64,7 @@ pip install qrcode Pillow
 #### Ejecución
 Para ejecutar la aplicación GUI:
 ```bash
-python main.py
+python local_test.py
 ```
 
 ### Funcionalidades
