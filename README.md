@@ -1,33 +1,75 @@
 # Generador de Códigos QR
 
 ## Descripción
-Esta aplicación permite a los usuarios generar códigos QR a partir de una URL o de datos introducidos manualmente. La interfaz gráfica está desarrollada utilizando `tkinter`, haciendo que la aplicación sea fácil de usar y accesible para cualquier usuario con conocimientos básicos de computación.
+Este proyecto incluye dos componentes principales:
+1. Una API construida con FastAPI que permite generar códigos QR desde datos enviados a través de HTTP.
+2. Una aplicación de escritorio con interfaz gráfica, desarrollada con `tkinter`, que permite a los usuarios generar códigos QR a partir de una URL o de datos introducidos manualmente.
 
 ## Autores
 - Alfonso Garcia Yague
 - Emmanuel Acosta
 
-## Dependencias
-Para ejecutar esta aplicación, necesitarás Python y algunas bibliotecas externas. Asegúrate de tener instalado Python en tu sistema. Esta aplicación ha sido probada con Python 3.8, pero debería ser compatible con versiones posteriores.
+---
 
-### Bibliotecas necesarias:
-- `tkinter`: Para la interfaz gráfica de usuario. `tkinter` suele venir preinstalado con Python.
-- `qrcode`: Para la generación de códigos QR.
-- `Pillow` (PIL Fork): Para manejar imágenes dentro de la aplicación.
+## API de Generación de Códigos QR con FastAPI
 
-Puedes instalar las dependencias necesarias mediante el siguiente comando:
+### Descripción de la API
+La API permite a los usuarios enviar datos a través de un endpoint y recibir como respuesta un código QR generado basado en esos datos.
+
+### Instalación y Ejecución
+Para instalar y ejecutar la API, necesitarás Python y algunas dependencias.
+
+#### Dependencias
+- `fastapi`
+- `uvicorn`
+- `qrcode`
+- `Pillow`
+
+Instala las dependencias usando:
+```bash
+pip install fastapi uvicorn qrcode Pillow
+```
+
+#### Ejecución
+Para ejecutar la API:
+```bash
+uvicorn main:app --reload
+```
+Esto iniciará el servidor en `http://127.0.0.1:8000`.
+
+### Uso
+#### Endpoint `/generate-qr/`
+- Método: POST
+- Enviar JSON: `{"data": "Texto o URL a convertir en QR"}`
+- Retorna: Imagen del código QR como respuesta directa.
+
+---
+
+## Aplicación GUI para Generación de Códigos QR
+
+### Descripción de la Aplicación GUI
+La aplicación de escritorio permite a los usuarios generar códigos QR desde una interfaz simple y amigable.
+
+### Instalación y Ejecución
+#### Dependencias
+- `tkinter` (generalmente incluido con Python)
+- `qrcode`
+- `Pillow`
+
+Instala las dependencias necesarias (excepto `tkinter` que ya debería estar instalado):
+```bash
 pip install qrcode Pillow
+```
 
-Nota: `tkinter` generalmente viene incluido en la instalación estándar de Python. Si tu instalación de Python no lo incluye, puedes necesitar instalarlo siguiendo las instrucciones específicas para tu sistema operativo.
-
-## Ejecución del Programa
-Para ejecutar esta aplicación, simplemente navega hasta el directorio del archivo y ejecuta el script `main.py` usando Python. Por ejemplo:
+#### Ejecución
+Para ejecutar la aplicación GUI:
+```bash
 python main.py
+```
 
+### Funcionalidades
+- **Generar QR desde URL**: Introduce una URL para generar un código QR.
+- **Generar QR desde Datos de Entrada**: Introduce cualquier texto para generar un código QR.
 
-## Funcionalidades
-- **Generar QR desde URL**: Permite a los usuarios introducir una URL para generar un código QR correspondiente.
-- **Generar QR desde Datos de Entrada**: Permite a los usuarios introducir cualquier texto o dato para generar un código QR.
-
-## Interfaz Gráfica
-La interfaz gráfica cuenta con un campo de entrada para los datos o URL, botones para generar el código QR y un área donde se muestra el código QR generado.
+### Interfaz
+La aplicación cuenta con campos de entrada para los datos o URL, botones para generar el QR, y un área para mostrar el QR generado.
