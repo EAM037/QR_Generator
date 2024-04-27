@@ -1,5 +1,11 @@
 #DEPENDENCIAS DEL CODIGO 
 
+fastapi
+uvicorn
+pydantic
 qrcode
 Pillow
+
 # tkinter normalmente esta incluido en la libreria Standard de Python (no se puede instalar con pip)
+#Instalar todos los paquetes --> pip install -r requirements.txt
+
